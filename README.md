@@ -1,6 +1,8 @@
 1.	Tytuł projektu
 omaga
 
+brawo boss
+
 „MEGA BIG WIN” – gra hazardowa na wzór kasyna z wirtualną ekonomią 
 2. Skład zespołu
 Klasa 3B:
