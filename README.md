@@ -32,15 +32,15 @@ Dodatkowe funkcjonalności:
  - mafia przychodzi i cie zabiera
 	
 MVP:
-•	Gra typu poker holdem. 
+ - Gra typu poker holdem. 
 5. Technologi
 Języki programowania:
-•	C sharp (C#)
+ - C sharp (C#)
 Frameworki:
-•	GOdot
+ - GOdot
 Narzędzia:
-•	GOdot
-•	Git (kontrola wersji).
+ - GOdot
+ - Git (kontrola wersji).
 7. Harmonogram prac dla 4 etapów
 Etap 1: Implementacja modułu gry
 Zadania:
@@ -49,16 +49,16 @@ Filipek: ruletka (kod)
 Wspólnie: poker holdem (kod), projektowanie grafik do gry,  
 Etap 2: Implementacja modułu mini gry
 Zadania:
-•	Natusia: grafiki przedmiotów do mini gier
-•	Filipek:  projekt kodu
+ - Natusia: grafiki przedmiotów do mini gier
+ - Filipek:  projekt kodu
 
 Etap 3: Implementacja modułu sklepu
 Zadania:
-•	Natusia: projekt sklepu oraz kod
-•	Filipek: grafiki przedmiotów w sklepie
+ - Natusia: projekt sklepu oraz kod
+ - Filipek: grafiki przedmiotów w sklepie
 Kryteria sukcesu
-•	Gra typu poker holdem, ruletka oraz bingo
-•	3 mini gry
-•	Sklep z przdmiotami 
+ - Gra typu poker holdem, ruletka oraz bingo
+ - 3 mini gry
+ - Sklep z przdmiotami 
 9. Potencjalne ryzyka
-•	Programiści nie podołają zadaniu :<
+ - Programiści nie podołają zadaniu :<
