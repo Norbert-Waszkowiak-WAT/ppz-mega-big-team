@@ -32,16 +32,17 @@ Dodatkowe funkcjonalności:
  - mafia przychodzi i cie zabiera
 	
 MVP:
- - Gra typu poker holdem. 
-5. Technologi
-Języki programowania:
+ - Gra typu poker holdem.
+
+### 5. Technologi
+**Języki programowania:**
  - C sharp (C#)
-Frameworki:
+**Frameworki:**
  - GOdot
-Narzędzia:
+**Narzędzia:**
  - GOdot
  - Git (kontrola wersji).
-7. Harmonogram prac dla 4 etapów
+### 7. Harmonogram prac dla 4 etapów
 Etap 1: Implementacja modułu gry
 Zadania:
 Natusia: bingo (kod)
@@ -60,5 +61,5 @@ Kryteria sukcesu
  - Gra typu poker holdem, ruletka oraz bingo
  - 3 mini gry
  - Sklep z przdmiotami 
-9. Potencjalne ryzyka
+### 9. Potencjalne ryzyka
  - Programiści nie podołają zadaniu :<
