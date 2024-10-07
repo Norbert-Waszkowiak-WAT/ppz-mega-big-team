@@ -21,13 +21,13 @@ Moduły:
 
 **1.	Moduł Gry**
  - Gra w poker holdem, ruletka oraz bingo.
- - 
+
 **2.	Moduł Ekonomii/Zarabiania:**
  - Mini gry za które będziemy zarabiać coin(1) aby następnie móc w na żetony którymi gramy w kasynowe gry.
- - 
+   
 **3.	Moduł Ekonomii/Wydawanie:**
  - wygrane pieniądze z kasyna ( w formie żetonów ) możemy wymienić na coiny (2),za która można kupować przedmioty w wirtualnym sklpie.
- - 
+   
 Dodatkowe funkcjonalności:
  - mafia przychodzi i cie zabiera
 	
