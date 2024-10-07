@@ -18,11 +18,11 @@ Celem aplikacji jest zapewnienie rozrywki użytkownikowi przez gry hazardowe np.
 
 5. Zakres funkcjonalności
 Moduły:
-## 1.	Moduł Gry
+**1.	Moduł Gry**
 •	Gra w poker holdem, ruletka oraz bingo.
-## 2.	Moduł Ekonomii/Zarabiania:
+**2.	Moduł Ekonomii/Zarabiania:**
 •	Mini gry za które będziemy zarabiać coin(1) aby następnie móc w na żetony którymi gramy w kasynowe gry. 
-## 3.	Moduł Ekonomii/Wydawanie:
+**3.	Moduł Ekonomii/Wydawanie:**
 •	wygrane pieniądze z kasyna ( w formie żetonów ) możemy wymienić na coiny (2),za która można kupować przedmioty w wirtualnym sklpie.
 Dodatkowe funkcjonalności:
 •	Rozbudowanie każdego z powyżej wymienionych modułów przez dodanie nowych gier lub przedmiotów do sklepu. 
