@@ -1,0 +1,166 @@
+[gd_scene load_steps=14 format=3 uid="uid://dvho7q7vps432"]
+
+[ext_resource type="Texture2D" uid="uid://xl2bn4qvmfxp" path="res://assets/menu/_.jpg" id="1_gsxak"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_j0g3q"]
+[ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="2_ko3qn"]
+[ext_resource type="Texture2D" uid="uid://tem15n6ka6m" path="res://assets/menu/1.png" id="3_ngel0"]
+[ext_resource type="Texture2D" uid="uid://bq7upx4gjx3rr" path="res://assets/menu/2.png" id="3_sfgbm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rnci"]
+texture = ExtResource("1_gsxak")
+modulate_color = Color(0.637843, 0.637843, 0.637843, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0i3e"]
+texture = ExtResource("3_ngel0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kcpk"]
+texture = ExtResource("3_ngel0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2usc"]
+texture = ExtResource("3_sfgbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krmbm"]
+texture = ExtResource("3_sfgbm")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_uerav"]
+frame_0/texture = ExtResource("3_ngel0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltro7"]
+texture = SubResource("AnimatedTexture_uerav")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kero1"]
+texture = ExtResource("3_ngel0")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j0g3q")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1rnci")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -356.5
+offset_top = -228.0
+offset_right = 356.5
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.423185, 0, 0, 1)
+theme_override_constants/line_spacing = 20
+theme_override_constants/shadow_offset_x = 21
+theme_override_constants/outline_size = 28
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_ko3qn")
+theme_override_font_sizes/font_size = 100
+text = "Demonic Casino
+"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = 22.0
+offset_right = 111.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.44895, 1.30555e-06, 9.62615e-08, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 14
+theme_override_constants/outline_size = 27
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_ko3qn")
+theme_override_font_sizes/font_size = 40
+text = "PLAY OR DIE"
+
+[node name="START button" type="Button" parent="."]
+light_mask = 512
+z_as_relative = false
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = 64.0
+offset_right = 202.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998797, 1.02213)
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ko3qn")
+theme_override_font_sizes/font_size = 47
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_c0i3e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_6kcpk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d2usc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_krmbm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ltro7")
+text = "START"
+icon_alignment = 2
+vertical_icon_alignment = 0
+text_direction = 3
+
+[node name="EXIT button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 162.0
+offset_right = 200.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ko3qn")
+theme_override_font_sizes/font_size = 47
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_kero1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d2usc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_krmbm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ltro7")
+text = "EXIT"
+icon_alignment = 2
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="START button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="EXIT button" to="." method="_on_exit_pressed"]
