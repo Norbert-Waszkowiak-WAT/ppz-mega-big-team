@@ -20,6 +20,7 @@ var texts = [
 
 func _play_aniamtion():
 	$AnimationPlayer.play("label_animation")
+	
 
 
 func _ready():
