@@ -18,6 +18,11 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 TextManager="*res://text_manager.gd"
 
+[display]
+
+window/size/mode=3
+window/stretch/scale=1.35
+
 [input]
 
 dupa={

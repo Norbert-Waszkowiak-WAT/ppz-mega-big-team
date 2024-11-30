@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnmprtdmj8dxj"]
 
-[ext_resource type="FontFile" uid="uid://c3deng1n55b4f" path="res://assets/menu/easvhs.ttf" id="1_u1c7j"]
-[ext_resource type="Script" path="res://losowanie_bingo.gd" id="2_suifu"]
+[ext_resource type="FontFile" uid="uid://c3deng1n55b4f" path="res://assets/menu/easvhs.ttf" id="1_i1yyl"]
+[ext_resource type="Script" path="res://scripts/losowanie_bingo.gd" id="2_7i7dn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p85p"]
 bg_color = Color(0.552941, 0.396078, 0.772549, 1)
@@ -15,8 +15,14 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [node name="MarginContainer" type="MarginContainer"]
-offset_right = 466.0
-offset_bottom = 88.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -482.0
+offset_bottom = 91.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -32,22 +38,23 @@ size_flags_horizontal = 0
 theme_override_colors/font_shadow_color = Color(0.384314, 0.317647, 0.603922, 1)
 theme_override_colors/font_outline_color = Color(0.384314, 0.317647, 0.603922, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("1_u1c7j")
+theme_override_fonts/font = ExtResource("1_i1yyl")
 theme_override_font_sizes/font_size = 40
 text = "WYLOSOWANA LICZBA:"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
 theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 40
+theme_override_constants/margin_right = 16
 
 [node name="Label" type="Label" parent="MarginContainer2"]
 layout_mode = 2
+size_flags_horizontal = 8
 theme_override_colors/font_shadow_color = Color(0.384314, 0.317647, 0.603922, 1)
 theme_override_colors/font_outline_color = Color(0.385509, 0.317627, 0.605864, 1)
 theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("1_u1c7j")
+theme_override_fonts/font = ExtResource("1_i1yyl")
 theme_override_font_sizes/font_size = 50
 text = "12"
 horizontal_alignment = 2
-script = ExtResource("2_suifu")
+script = ExtResource("2_7i7dn")

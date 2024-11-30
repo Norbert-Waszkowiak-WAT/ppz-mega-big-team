@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://jbrujtrtdfgo"]
+
+[sub_resource type="GDScript" id="GDScript_qgois"]
+
+[node name="Panel" type="Panel"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_qgois")
