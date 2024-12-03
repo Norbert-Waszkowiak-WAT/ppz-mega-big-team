@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqeagx0667atj"]
+
+[ext_resource type="PackedScene" uid="uid://bthsfcfkaqgvp" path="res://bingo_board.tscn" id="1_55sfu"]
+[ext_resource type="PackedScene" uid="uid://cnmprtdmj8dxj" path="res://scenes/wylosowana.tscn" id="2_tgdo3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource("1_55sfu")]
+offset = Vector2(-400, -30)
+transform = Transform2D(1, 0, 0, 1, -400, -30)
+
+[node name="MarginContainer" parent="." instance=ExtResource("2_tgdo3")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 538.0
+offset_right = 939.0
+offset_bottom = 71.0
+grow_horizontal = 2
