@@ -1,0 +1,115 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4wh54jp1opa"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_57e6q"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_57e6q")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 285.0
+offset_right = 953.0
+offset_bottom = 316.0
+text = "guzior
+"
+
+[node name="boxes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bounding_box" type="Control" parent="boxes"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 506.0
+offset_top = 254.0
+offset_right = 606.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="img1" type="TextureRect" parent="boxes/bounding_box"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="img2" type="TextureRect" parent="boxes/bounding_box"]
+layout_mode = 0
+offset_top = -100.0
+offset_right = 100.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="bounding_box2" type="Control" parent="boxes"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 606.0
+offset_top = 254.0
+offset_right = 706.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="img1" type="TextureRect" parent="boxes/bounding_box2"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="img2" type="TextureRect" parent="boxes/bounding_box2"]
+layout_mode = 0
+offset_top = -100.0
+offset_right = 100.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="bounding_box3" type="Control" parent="boxes"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 706.0
+offset_top = 254.0
+offset_right = 806.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="img1" type="TextureRect" parent="boxes/bounding_box3"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="img2" type="TextureRect" parent="boxes/bounding_box3"]
+layout_mode = 0
+offset_top = -100.0
+offset_right = 100.0
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
