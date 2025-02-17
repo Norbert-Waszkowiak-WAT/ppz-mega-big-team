@@ -9,7 +9,7 @@ func _ready():
 	var B4 = $VBoxContainer/margin4/label
 	var B5 = $VBoxContainer/margin5/label
 	var table = []
-	for i in range(1, 20):  # Liczby od 1 do 99
+	for i in range(21, 40):  # Liczby od 1 do 99
 		table.append(i)
 	print(table)
 	

@@ -9,9 +9,15 @@ corner_detail = 1
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seufo"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="fioletowe" type="MarginContainer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="fioletowe" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -23,11 +29,11 @@ offset_right = 250.0
 offset_bottom = 300.0
 grow_vertical = 0
 
-[node name="Panel" type="Panel" parent="fioletowe"]
+[node name="Panel" type="Panel" parent="CanvasLayer/fioletowe"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nux7u")
 
-[node name="NAPIS_BINGO" type="MarginContainer" parent="."]
+[node name="NAPIS_BINGO" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -40,14 +46,14 @@ offset_bottom = -189.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="NAPIS_BINGO"]
+[node name="Label" type="Label" parent="CanvasLayer/NAPIS_BINGO"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b0nfh")
 theme_override_font_sizes/font_size = 100
 text = "BINGO"
 horizontal_alignment = 1
 
-[node name="Siatka" type="MarginContainer" parent="."]
+[node name="Siatka" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -60,9 +66,6 @@ offset_bottom = 289.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="Siatka"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Siatka"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_seufo")
-
-[node name="GridContainer" type="GridContainer" parent="Siatka"]
-layout_mode = 2

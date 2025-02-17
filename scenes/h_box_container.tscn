@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgl2h1y6vup5q"]
+
+[ext_resource type="PackedScene" uid="uid://bjo8i7bofsuki" path="res://B.tscn" id="1_sdr2x"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+layout_direction = 1
+offset_right = 475.0
+offset_bottom = 475.0
+theme_override_constants/separation = 0
+
+[node name="B" parent="." instance=ExtResource("1_sdr2x")]
+layout_mode = 2
+
+[node name="B2" parent="." instance=ExtResource("1_sdr2x")]
+layout_mode = 2
+
+[node name="B3" parent="." instance=ExtResource("1_sdr2x")]
+layout_mode = 2
+
+[node name="B4" parent="." instance=ExtResource("1_sdr2x")]
+layout_mode = 2

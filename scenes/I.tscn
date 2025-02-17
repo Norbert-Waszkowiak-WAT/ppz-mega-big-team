@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjo8i7bofsuki"]
+[gd_scene load_steps=3 format=3 uid="uid://c0lvqkn8p7q26"]
 
-[ext_resource type="Script" path="res://B_generacja.gd" id="1_7tth1"]
+[ext_resource type="Script" path="res://I_generacja.gd" id="1_know1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lilfs"]
 bg_color = Color(1, 1, 1, 1)
@@ -10,14 +10,14 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.552941, 0.396078, 0.772549, 1)
 
-[node name="B" type="Control"]
+[node name="I" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7tth1")
+script = ExtResource("1_know1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
