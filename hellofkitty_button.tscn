@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4t4st5mlfsx2"]
+
+[ext_resource type="Texture2D" uid="uid://1is1i2d5bya4" path="res://1000002618 (1).png" id="1_jcktg"]
+[ext_resource type="Script" path="res://hellofkitty_button.gd" id="2_5ojqp"]
+
+[node name="Button" type="Button"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -259.5
+offset_right = 283.0
+offset_bottom = 259.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("1_jcktg")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_5ojqp")
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

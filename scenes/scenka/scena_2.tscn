@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnwd640x6k4ny"]
+[gd_scene load_steps=4 format=3 uid="uid://dnv2xh4rbu35s"]
 
-[ext_resource type="Texture2D" uid="uid://utijxfdq13um" path="res://assets/menu/jkfjhffh.jpg" id="1_s3wht"]
-[ext_resource type="PackedScene" uid="uid://bpykfnh2ded8l" path="res://scenes/textbox.tscn" id="2_eaepc"]
+[ext_resource type="Texture2D" uid="uid://utijxfdq13um" path="res://assets/menu/jkfjhffh.jpg" id="1_7mw7n"]
+[ext_resource type="PackedScene" uid="uid://bpykfnh2ded8l" path="res://scenes/scenka/textbox.tscn" id="2_fqdjw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cq0d"]
-texture = ExtResource("1_s3wht")
+texture = ExtResource("1_7mw7n")
 modulate_color = Color(0.787759, 0.787759, 0.787759, 1)
 
 [node name="scena2" type="Control"]
@@ -24,4 +24,4 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_4cq0d")
 
-[node name="Textbox" parent="." instance=ExtResource("2_eaepc")]
+[node name="Textbox" parent="." instance=ExtResource("2_fqdjw")]

@@ -14,3 +14,8 @@ config/name="slots"
 run/main_scene="res://control.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalSignals="*res://GlobalSignals.gd"
+Global="*res://Global.gd"
