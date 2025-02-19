@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://h2gc6c6skxb5"]
+
+[ext_resource type="Texture2D" uid="uid://3j2jxiams6ot" path="res://scenes/nygggggggg.png" id="1_rvtfo"]
+[ext_resource type="Script" path="res://exit_clicker.gd" id="2_4hj4t"]
+
+[node name="Button2" type="Button"]
+offset_left = -27.0
+offset_top = -24.0
+offset_right = 3445.0
+offset_bottom = 3448.0
+scale = Vector2(0.0615404, 0.0540793)
+icon = ExtResource("1_rvtfo")
+flat = true
+script = ExtResource("2_4hj4t")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

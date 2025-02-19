@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c76utyvxdtv8j"]
+[gd_scene load_steps=12 format=3 uid="uid://c76utyvxdtv8j"]
 
 [ext_resource type="Texture2D" uid="uid://co2wofaqjvpoa" path="res://hellofkitty.jpg" id="1_0obvg"]
 [ext_resource type="PackedScene" uid="uid://b4t4st5mlfsx2" path="res://hellofkitty_button.tscn" id="2_0q5q0"]
@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnmprtdmj8dxj" path="res://scenes/bingo/wylosowana.tscn" id="3_wwgwu"]
 [ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="4_5qsme"]
 [ext_resource type="Script" path="res://label_animation_kitty.gd" id="5_mgaqx"]
-[ext_resource type="Texture2D" uid="uid://3j2jxiams6ot" path="res://scenes/nygggggggg.png" id="7_su07k"]
-[ext_resource type="Script" path="res://exit_clicker.gd" id="8_ac358"]
+[ext_resource type="PackedScene" uid="uid://h2gc6c6skxb5" path="res://exit_button2.tscn" id="7_uu8mr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_devns"]
 texture = ExtResource("1_0obvg")
@@ -114,15 +113,5 @@ offset_right = 0.0
 offset_bottom = 0.0
 focus_mode = 0
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" parent="." instance=ExtResource("7_uu8mr")]
 layout_mode = 0
-offset_left = -27.0
-offset_top = -24.0
-offset_right = 3445.0
-offset_bottom = 3448.0
-scale = Vector2(0.0615404, 0.0540793)
-icon = ExtResource("7_su07k")
-flat = true
-script = ExtResource("8_ac358")
-
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

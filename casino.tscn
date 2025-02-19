@@ -80,6 +80,17 @@ theme_override_constants/outline_size = 70
 theme_override_font_sizes/font_size = 240
 text = "*cost: 10 coins*"
 
+[node name="Label2" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 728.377
+offset_top = 4042.93
+offset_right = 7679.38
+offset_bottom = 4575.93
+theme = ExtResource("5_477og")
+theme_override_constants/outline_size = 100
+theme_override_font_sizes/font_size = 400
+text = "NIE MASZ WYSTARCZAJĄCO PIENIĘDZY"
+
 [node name="MarginContainer" parent="." instance=ExtResource("6_dgsil")]
 layout_mode = 1
 offset_left = -199.0
