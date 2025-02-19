@@ -115,3 +115,7 @@ focus_mode = 0
 
 [node name="Button2" parent="." instance=ExtResource("7_uu8mr")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 3472.0
+offset_bottom = 3472.0

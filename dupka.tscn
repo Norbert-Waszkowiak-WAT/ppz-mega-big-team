@@ -1,0 +1,152 @@
+[gd_scene load_steps=2 format=3 uid="uid://ikrpdnvt6re8"]
+
+[ext_resource type="Script" path="res://poker_game.gd" id="1_vki44"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vki44")
+
+[node name="katrta_gracza1" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 355.0
+offset_right = 506.0
+offset_bottom = 616.0
+
+[node name="Label" type="Label" parent="katrta_gracza1"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1
+
+[node name="katrta_gracza2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 364.0
+offset_right = 697.0
+offset_bottom = 625.0
+
+[node name="Label" type="Label" parent="katrta_gracza2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1
+
+[node name="katrta1" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 31.0
+offset_right = 203.0
+offset_bottom = 292.0
+
+[node name="Label" type="Label" parent="katrta1"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1
+
+[node name="katrta2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 34.0
+offset_right = 391.0
+offset_bottom = 295.0
+
+[node name="Label" type="Label" parent="katrta2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1
+
+[node name="katrta3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 42.0
+offset_right = 587.0
+offset_bottom = 303.0
+
+[node name="Label" type="Label" parent="katrta3"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1
+
+[node name="katrta4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 41.0
+offset_right = 824.0
+offset_bottom = 302.0
+
+[node name="Label" type="Label" parent="katrta4"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1
+
+[node name="katrta5" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 47.0
+offset_right = 1069.0
+offset_bottom = 308.0
+
+[node name="Label" type="Label" parent="katrta5"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KUPA"
+horizontal_alignment = 1

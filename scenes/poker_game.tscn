@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://dkjfjkp6esqsn"]
+[gd_scene load_steps=4 format=3 uid="uid://dkjfjkp6esqsn"]
+
+[ext_resource type="Texture2D" uid="uid://mexlkfqv1vbp" path="res://scenes/karty/Cards/1d43cfdb024c0aaea0b97f09370a30f3.jpg" id="1_sgv38"]
+[ext_resource type="PackedScene" uid="uid://d0nb0c71c647m" path="res://scenes/bingo/chip_counter.tscn" id="3_yldlu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_707ay"]
+texture = ExtResource("1_sgv38")
 
 [node name="Poker_game" type="Control"]
 layout_mode = 3
@@ -7,3 +13,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_707ay")
+
+[node name="MarginContainer" parent="." instance=ExtResource("3_yldlu")]
+layout_mode = 1
+offset_left = -236.0
+offset_bottom = 76.0
