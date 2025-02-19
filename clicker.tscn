@@ -1,11 +1,53 @@
-[gd_scene load_steps=5 format=3 uid="uid://c76utyvxdtv8j"]
+[gd_scene load_steps=13 format=3 uid="uid://c76utyvxdtv8j"]
 
 [ext_resource type="Texture2D" uid="uid://co2wofaqjvpoa" path="res://hellofkitty.jpg" id="1_0obvg"]
 [ext_resource type="PackedScene" uid="uid://b4t4st5mlfsx2" path="res://hellofkitty_button.tscn" id="2_0q5q0"]
+[ext_resource type="Theme" uid="uid://chpkrcnourue4" path="res://theme/kitty_style.tres" id="3_0p5xv"]
 [ext_resource type="PackedScene" uid="uid://cnmprtdmj8dxj" path="res://scenes/bingo/wylosowana.tscn" id="3_wwgwu"]
+[ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="4_5qsme"]
+[ext_resource type="Script" path="res://label_animation_kitty.gd" id="5_mgaqx"]
+[ext_resource type="Texture2D" uid="uid://3j2jxiams6ot" path="res://scenes/nygggggggg.png" id="7_su07k"]
+[ext_resource type="Script" path="res://exit_clicker.gd" id="8_ac358"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_devns"]
 texture = ExtResource("1_0obvg")
+
+[sub_resource type="Animation" id="Animation_dskvb"]
+resource_name = "Pulse"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_3650j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u0vaq"]
+_data = {
+"Pulse": SubResource("Animation_dskvb"),
+"RESET": SubResource("Animation_3650j")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,9 +66,63 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_devns")
 
-[node name="Button" parent="." instance=ExtResource("2_0q5q0")]
-layout_mode = 1
-
 [node name="MarginContainer" parent="." instance=ExtResource("3_wwgwu")]
 layout_mode = 1
 offset_left = -423.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -342.5
+offset_top = -106.0
+offset_right = 342.5
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(340, 25)
+theme = ExtResource("3_0p5xv")
+theme_override_colors/font_color = Color(0.670588, 0.14902, 0.447059, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("4_5qsme")
+theme_override_font_sizes/font_size = 45
+text = "*PRESS KITTY!*"
+horizontal_alignment = 1
+script = ExtResource("5_mgaqx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label3"]
+libraries = {
+"": SubResource("AnimationLibrary_u0vaq")
+}
+autoplay = "Pulse"
+
+[node name="Button" parent="." instance=ExtResource("2_0q5q0")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+focus_mode = 0
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -24.0
+offset_right = 3445.0
+offset_bottom = 3448.0
+scale = Vector2(0.0615404, 0.0540793)
+icon = ExtResource("7_su07k")
+flat = true
+script = ExtResource("8_ac358")
+
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

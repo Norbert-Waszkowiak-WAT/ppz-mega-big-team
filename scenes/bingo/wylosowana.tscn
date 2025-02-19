@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://clicker_scorer_script.gd" id="2_rly2e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p85p"]
-bg_color = Color(0.552941, 0.396078, 0.772549, 1)
+bg_color = Color(0.868914, 0.522011, 0.814331, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
@@ -36,8 +36,8 @@ theme_override_constants/margin_left = 20
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_shadow_color = Color(0.384314, 0.317647, 0.603922, 1)
-theme_override_colors/font_outline_color = Color(0.384314, 0.317647, 0.603922, 1)
+theme_override_colors/font_shadow_color = Color(0.529614, 0.166065, 0.48037, 1)
+theme_override_colors/font_outline_color = Color(0.824471, 0.171146, 0.662233, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("1_i1yyl")
 theme_override_font_sizes/font_size = 40
@@ -51,8 +51,9 @@ theme_override_constants/margin_right = 16
 [node name="Label" type="Label" parent="MarginContainer2"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_colors/font_shadow_color = Color(0.384314, 0.317647, 0.603922, 1)
-theme_override_colors/font_outline_color = Color(0.385509, 0.317627, 0.605864, 1)
+theme_override_colors/font_shadow_color = Color(0.823529, 0.172549, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.823529, 0.172549, 0.662745, 1)
+theme_override_constants/outline_size = 15
 theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("1_i1yyl")
 theme_override_font_sizes/font_size = 50

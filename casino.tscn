@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://cl0ukejhefdxt"]
+
+[ext_resource type="Texture2D" uid="uid://b34s3ewhbhsxt" path="res://assets/menu/casinko.jpg" id="1_fos67"]
+[ext_resource type="Texture2D" uid="uid://ch6pg61cg17or" path="res://assets/menu/Picsart_25-02-18_23-43-37-255.png" id="2_fogju"]
+[ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="3_6d0r7"]
+[ext_resource type="Script" path="res://poker_button.gd" id="3_xyjrh"]
+[ext_resource type="Theme" uid="uid://chpkrcnourue4" path="res://theme/kitty_style.tres" id="5_477og"]
+[ext_resource type="PackedScene" uid="uid://cnmprtdmj8dxj" path="res://scenes/bingo/wylosowana.tscn" id="6_dgsil"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aedrc"]
+texture = ExtResource("1_fos67")
+modulate_color = Color(0.47788, 0.47788, 0.47788, 1)
+
+[node name="Casino" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_aedrc")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -61.0
+offset_right = 3455.0
+offset_bottom = 3411.0
+scale = Vector2(0.145529, 0.136782)
+theme_override_font_sizes/font_size = 101
+text = "POKER
+"
+icon = ExtResource("2_fogju")
+flat = true
+clip_text = true
+script = ExtResource("3_xyjrh")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.69148, 0.200384, 0.520514, 1)
+theme_override_constants/shadow_outline_size = 100
+theme_override_fonts/font = ExtResource("3_6d0r7")
+theme_override_font_sizes/font_size = 275
+text = "POKER"
+
+[node name="cost" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -679.792
+offset_top = 969.034
+offset_right = 880.208
+offset_bottom = 1194.03
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_477og")
+theme_override_constants/outline_size = 70
+theme_override_font_sizes/font_size = 240
+text = "*cost: 10 coins*"
+
+[node name="MarginContainer" parent="." instance=ExtResource("6_dgsil")]
+layout_mode = 1
+offset_left = -199.0
+offset_top = 4.0
+offset_right = 2.0
+offset_bottom = 95.0
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

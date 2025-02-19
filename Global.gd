@@ -8,3 +8,4 @@ func add_coin(value: int):
 	coin += value
 	emit_signal("my_signal", coin)  # Wysyłamy nową wartość
 	print("Nowa wartość coin:", coin)
+	

@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://chpkrcnourue4"]
+
+[ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="1_1wttf"]
+
+[resource]
+Label/colors/font_color = Color(0.670588, 0.14902, 0.447059, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/constants/outline_size = 17
+Label/font_sizes/font_size = 75
+Label/fonts/font = ExtResource("1_1wttf")
+Label/styles/normal = null

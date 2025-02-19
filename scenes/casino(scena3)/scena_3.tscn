@@ -1,7 +1,107 @@
-[gd_scene format=3 uid="uid://blcfdyly7r032"]
+[gd_scene load_steps=9 format=3 uid="uid://blcfdyly7r032"]
+
+[ext_resource type="Texture2D" uid="uid://cebjl8ac785k1" path="res://scenes/casino(scena3)/pokoj1.png" id="1_ce54i"]
+[ext_resource type="Texture2D" uid="uid://da4pu5dytgmi0" path="res://assets/menu/Picsart_25-02-18_10-40-48-874.png" id="2_qkdi3"]
+[ext_resource type="Script" path="res://scenes/casino(scena3)/button.gd" id="3_ckixq"]
+[ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="4_5n74w"]
+[ext_resource type="Script" path="res://tekst_clicker_scena.gd" id="4_a6r6x"]
+[ext_resource type="Script" path="res://button_scena3_2.gd" id="6_70ynt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0vma"]
+texture = ExtResource("1_ce54i")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6dub"]
+size = Vector2(263, 319)
 
 [node name="scena_3" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w0vma")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 131.0
+offset_right = 3507.0
+offset_bottom = 3075.0
+scale = Vector2(0.161447, 0.17657)
+texture_normal = ExtResource("2_qkdi3")
+script = ExtResource("3_ckixq")
+
+[node name="Area2D" type="Area2D" parent="TextureButton"]
+position = Vector2(2917.37, 84.9523)
+scale = Vector2(6.19399, 5.66349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureButton/Area2D"]
+position = Vector2(-231.5, 240.5)
+shape = SubResource("RectangleShape2D_h6dub")
+
+[node name="Label2" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 346.864
+offset_top = 90.6159
+offset_right = 2765.86
+offset_bottom = 657.616
+scale = Vector2(0.749805, 0.827316)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 80
+theme_override_fonts/font = ExtResource("4_5n74w")
+theme_override_font_sizes/font_size = 200
+text = "Cliker
+*zarabianie kasy*"
+horizontal_alignment = 1
+script = ExtResource("4_a6r6x")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 129.0
+offset_right = 3092.0
+offset_bottom = 3073.0
+scale = Vector2(0.161447, 0.17657)
+texture_normal = ExtResource("2_qkdi3")
+script = ExtResource("6_70ynt")
+
+[node name="Area2D" type="Area2D" parent="TextureButton2"]
+position = Vector2(2917.37, 84.9523)
+scale = Vector2(6.19399, 5.66349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureButton2/Area2D"]
+position = Vector2(-231.5, 240.5)
+shape = SubResource("RectangleShape2D_h6dub")
+
+[node name="Label2" type="Label" parent="TextureButton2"]
+layout_mode = 0
+offset_left = 322.088
+offset_top = 192.559
+offset_right = 2741.09
+offset_bottom = 759.559
+scale = Vector2(0.749805, 0.827316)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 80
+theme_override_fonts/font = ExtResource("4_5n74w")
+theme_override_font_sizes/font_size = 200
+text = "CASINO"
+horizontal_alignment = 1
+script = ExtResource("4_a6r6x")
+
+[connection signal="mouse_entered" from="TextureButton" to="TextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="TextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="TextureButton2" to="TextureButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton2" to="TextureButton2" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_pressed"]
