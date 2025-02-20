@@ -1,4 +1,4 @@
-extends Label
+extends Control
 
 func wait_for_key_press(action_name):
 	while not Input.is_action_just_pressed(action_name):

@@ -1,6 +1,5 @@
 extends Control
 
-var available_numbers = []
 @onready var label1 = $katrta_gracza1/Label
 @onready var label2 = $katrta_gracza2/Label
 @onready var label3 = $katrta1/Label
@@ -10,31 +9,27 @@ var available_numbers = []
 @onready var label7 = $katrta5/Label
 
 func _ready():
-	# Inicjalizacja listy liczb od 1 do 52
-	for i in range(1, 53):
-		available_numbers.append(i)
-	
-	# Losowanie 5 liczb bez powtórzeń
-	var drawn_numbers = draw_numbers(7)
-	
-	print("Wylosowane liczby: ", drawn_numbers)
-	
-	label1.text = str(drawn_numbers[0])
-	label2.text = str(drawn_numbers[1])
-	label3.text = str(drawn_numbers[2])
-	label4.text = str(drawn_numbers[3])
-	label5.text = str(drawn_numbers[4])
-	label6.text = str(drawn_numbers[5])
-	label7.text = str(drawn_numbers[6])
+	Global.create_deck()  # Tworzymy i tasujemy talię
+	deal_cards()  # Rozdajemy karty graczowi i na stół
+	get_hand_ranking(Global.player_cards, Global.table_cards)  # Sprawdzamy układ
 
-func draw_numbers(count):
-	var drawn = []
-	for i in range(count):
-		if available_numbers.size() == 0:
-			print("Brak dostępnych liczb.")
-			break
-		var index = randi() % available_numbers.size()
-		var number = available_numbers[index]
-		available_numbers.remove_at(index)  # Usunięcie wylosowanej liczby
-		drawn.append(number)
-	return drawn
+func deal_cards():
+	# Rozdajemy 2 karty graczowi
+	Global.player_cards = [Global.deck.pop_front(), Global.deck.pop_front()]
+	
+	# Rozdajemy 5 kart na stół
+	Global.table_cards.clear()
+	for i in range(5):
+		Global.table_cards.append(Global.deck.pop_front())
+
+func get_hand_ranking(player_cards: Array, table_cards: Array):
+	var all_cards = player_cards + table_cards  # 7 kart razem
+
+	# Aktualizowanie etykiet GUI, wyświetlając rank i kolor kart
+	label1.text = str(player_cards[0].rank, " ", player_cards[0].suit)
+	label2.text = str(player_cards[1].rank, " ", player_cards[1].suit)
+	label3.text = str(table_cards[0].rank, " ", table_cards[0].suit)
+	label4.text = str(table_cards[1].rank, " ", table_cards[1].suit)
+	label5.text = str(table_cards[2].rank, " ", table_cards[2].suit)
+	label6.text = str(table_cards[3].rank, " ", table_cards[3].suit)
+	label7.text = str(table_cards[4].rank, " ", table_cards[4].suit)

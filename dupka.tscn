@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ikrpdnvt6re8"]
+[gd_scene load_steps=3 format=3 uid="uid://ikrpdnvt6re8"]
 
 [ext_resource type="Script" path="res://poker_game.gd" id="1_vki44"]
+[ext_resource type="Script" path="res://check-sc.gd" id="2_ycfrm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -150,3 +151,14 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "KUPA"
 horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 440.0
+offset_right = 274.0
+offset_bottom = 507.0
+text = "Check"
+script = ExtResource("2_ycfrm")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
