@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkjfjkp6esqsn"]
+[gd_scene load_steps=6 format=3 uid="uid://dkjfjkp6esqsn"]
 
 [ext_resource type="Texture2D" uid="uid://mexlkfqv1vbp" path="res://scenes/karty/Cards/1d43cfdb024c0aaea0b97f09370a30f3.jpg" id="1_sgv38"]
+[ext_resource type="Script" path="res://scenes/bet_button.gd" id="3_6m5tm"]
 [ext_resource type="PackedScene" uid="uid://d0nb0c71c647m" path="res://scenes/bingo/chip_counter.tscn" id="3_yldlu"]
+[ext_resource type="Script" path="res://scenes/line_edit.gd" id="4_7pr3m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_707ay"]
 texture = ExtResource("1_sgv38")
@@ -27,3 +29,27 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_707ay")
 layout_mode = 1
 offset_left = -236.0
 offset_bottom = 76.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 539.0
+offset_right = 211.0
+offset_bottom = 596.0
+text = "BET"
+script = ExtResource("3_6m5tm")
+
+[node name="LineEdit" type="LineEdit" parent="Button"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -50.0
+offset_right = 187.0
+offset_bottom = -19.0
+script = ExtResource("4_7pr3m")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

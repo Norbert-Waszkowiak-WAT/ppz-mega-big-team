@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://bb5w4k8bkmkh6"]
+
+[ext_resource type="PackedScene" uid="uid://cnmprtdmj8dxj" path="res://scenes/bingo/wylosowana.tscn" id="1_db4gi"]
+[ext_resource type="Script" path="res://buying_chips.gd" id="1_v65p0"]
+[ext_resource type="PackedScene" uid="uid://d0nb0c71c647m" path="res://scenes/bingo/chip_counter.tscn" id="2_5obys"]
+[ext_resource type="Texture2D" uid="uid://bfd6wg33o3hq5" path="res://scenes/bingo/c22bb6506b83b06cb2b69189db17c18c.jpg" id="2_fbo7g"]
+[ext_resource type="Theme" uid="uid://chpkrcnourue4" path="res://theme/kitty_style.tres" id="4_t6wpe"]
+[ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="5_joq3c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jfpmm"]
+texture = ExtResource("2_fbo7g")
+modulate_color = Color(0.891464, 0.78671, 0.814324, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v65p0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jfpmm")
+
+[node name="MarginContainer" parent="." instance=ExtResource("1_db4gi")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 208.0
+offset_right = 852.0
+offset_bottom = 415.0
+theme = ExtResource("4_t6wpe")
+theme_override_fonts/font = ExtResource("5_joq3c")
+theme_override_font_sizes/font_size = 40
+text = "ILE ŻETONÓW CHCESZ KUPIĆ?"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -39.0
+offset_right = 107.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_t6wpe")
+theme_override_font_sizes/font_size = 25
+text = "10 COINS = 1 CHIP"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 81.0
+offset_right = 229.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" parent="." instance=ExtResource("2_5obys")]
+layout_mode = 1
+offset_top = 95.0
+offset_bottom = 186.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -502.5
+offset_top = -116.0
+offset_right = 502.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_t6wpe")
+theme_override_font_sizes/font_size = 60
+text = "*NIE MASZ WYSTARCZAJACO COINOW*"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.5
+offset_top = 126.0
+offset_right = 112.5
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_t6wpe")
+theme_override_colors/icon_normal_color = Color(0.585747, 0.260569, 0.540052, 1)
+theme_override_fonts/font = ExtResource("5_joq3c")
+theme_override_font_sizes/font_size = 50
+text = "BUY"

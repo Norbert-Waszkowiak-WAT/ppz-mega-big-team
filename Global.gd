@@ -34,3 +34,7 @@ func add_coin(value: int):
 func add_chip(value: int):
 	chip = value
 	emit_signal("chip_signal", chip)  # Wysyłamy nową wartość
+
+func change_chip(value: int):
+	chip = chip + value
+	emit_signal("chip_signal", chip)

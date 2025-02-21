@@ -15,6 +15,7 @@ offset_right = 283.0
 offset_bottom = 259.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 icon = ExtResource("1_jcktg")
 flat = true
 icon_alignment = 1
