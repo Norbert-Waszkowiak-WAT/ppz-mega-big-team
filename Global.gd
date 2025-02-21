@@ -10,6 +10,7 @@ class Card:
 
 var deck: Array = []  # Talia kart
 var player_cards: Array = []  # Karty gracza
+var enemy_cards: Array = []  # Karty gracza
 var table_cards: Array = []  # Karty na stole
 
 func create_deck():

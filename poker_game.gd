@@ -8,22 +8,23 @@ extends Control
 @onready var label6 = $katrta4/Label
 @onready var label7 = $katrta5/Label
 
+@onready var label8 = $karta_przecziwnika1/Label
+@onready var label9 = $karta_przecziwnika2/Label
+
 func _ready():
 	Global.create_deck()  # Tworzymy i tasujemy talię
 	deal_cards()  # Rozdajemy karty graczowi i na stół
-	get_hand_ranking(Global.player_cards, Global.table_cards)  # Sprawdzamy układ
+	give_card(Global.player_cards, Global.table_cards,Global.enemy_cards)  # Sprawdzamy układ
 
 func deal_cards():
 	# Rozdajemy 2 karty graczowi
 	Global.player_cards = [Global.deck.pop_front(), Global.deck.pop_front()]
-	
-	# Rozdajemy 5 kart na stół
+	Global.enemy_cards = [Global.deck.pop_front(), Global.deck.pop_front()]
 	Global.table_cards.clear()
 	for i in range(5):
 		Global.table_cards.append(Global.deck.pop_front())
 
-func get_hand_ranking(player_cards: Array, table_cards: Array):
-	var all_cards = player_cards + table_cards  # 7 kart razem
+func give_card(player_cards: Array, table_cards: Array, enemy_cards: Array):
 
 	# Aktualizowanie etykiet GUI, wyświetlając rank i kolor kart
 	label1.text = str(player_cards[0].rank, " ", player_cards[0].suit)
@@ -33,3 +34,5 @@ func get_hand_ranking(player_cards: Array, table_cards: Array):
 	label5.text = str(table_cards[2].rank, " ", table_cards[2].suit)
 	label6.text = str(table_cards[3].rank, " ", table_cards[3].suit)
 	label7.text = str(table_cards[4].rank, " ", table_cards[4].suit)
+	label8.text = "hidden"
+	label9.text = "hidden"
