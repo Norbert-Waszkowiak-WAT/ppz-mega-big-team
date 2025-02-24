@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bb5w4k8bkmkh6"]
+[gd_scene load_steps=9 format=3 uid="uid://bb5w4k8bkmkh6"]
 
 [ext_resource type="PackedScene" uid="uid://cnmprtdmj8dxj" path="res://scenes/bingo/wylosowana.tscn" id="1_db4gi"]
 [ext_resource type="Script" path="res://buying_chips.gd" id="1_v65p0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfd6wg33o3hq5" path="res://scenes/bingo/c22bb6506b83b06cb2b69189db17c18c.jpg" id="2_fbo7g"]
 [ext_resource type="Theme" uid="uid://chpkrcnourue4" path="res://theme/kitty_style.tres" id="4_t6wpe"]
 [ext_resource type="FontFile" uid="uid://y6fkda1g4fgt" path="res://assets/menu/alagard.ttf" id="5_joq3c"]
+[ext_resource type="Script" path="res://line_edit.gd" id="6_8q5ls"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jfpmm"]
 texture = ExtResource("2_fbo7g")
@@ -73,6 +74,7 @@ offset_right = 229.0
 offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("6_8q5ls")
 
 [node name="MarginContainer2" parent="." instance=ExtResource("2_5obys")]
 layout_mode = 1
